@@ -1,0 +1,126 @@
+@model IEnumerable<Jaclyn_Noga_Portfolio.Models.Projects>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="spacer"></div>
+            <h1>Jaclyn<br /> Noga</h1>
+            <p>Full-Stack Junior Developer</p>
+        </div>
+        <div class="col-sm-7">
+            <img src="~/images/cleSil_withCompu.png" alt="cleveland" />
+        </div>
+    </div>
+</div><!-- end jumbotron-->
+
+<section id="about">
+    <div class="spacer"></div>
+    <div class="panel panel-success">
+        <div class="panel-heading">About</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-8">
+                    <p>
+                        Jaclyn is a student at We Can Code IT's full time programming
+                        bootcamp. Over the 12 weeks of the bootcamp, Jaclyn has practiced both
+                        front end and back end development- from console apps to
+                        SQL databases to MVC apps. After graduation in June 2016, she intends to
+                        begin a lasting career in Cleveland's growing tech industry.
+                    </p>
+                </div>
+                <div class="col-sm-4" id="skills">
+                    <h4>Tech Skills</h4>
+                    <ul>
+                        <li>ASP.NET</li>
+                        <li>C#</li>
+                        <li>CSS 3</li>
+                        <li>Entity Framework</li>
+                        <li>GIMP</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>HTML 5</li>
+                        <li>Jquery</li>
+                        <li>MVS</li>
+                        <li>Microsoft Office</li>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>SQL Server</li>
+                        <li>Scrum</li>
+                        <li>Twitter Bootstrap</li>
+                        <li>Visual Studio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- end about section -->
+
+<section id="projects">
+    <div class="spacer"></div>
+    <div class="panel panel-danger">
+        <div class="panel-heading">Projects</div>
+    </div>
+
+    <!-- start of slider that runs through each project-->
+    <div class="cycle-slideshow"
+         data-cycle-slides="> div">
+        <span class="cycle-prev glyphicon glyphicon-chevron-left"></span>
+        <span class="cycle-next glyphicon glyphicon-chevron-right"></span>
+        <span class="cycle-pager"></span>
+
+      
+            <div>
+                <div class="row">
+                    <!-- start left column. shows info for project -->
+                    <div class="col-md-4 col-sm-4">
+                        <h4>
+                            
+                        </h4>
+                        <p>
+                        
+                        </p>
+                        <p style="font-size:smaller">
+                            
+                            
+                            
+                        </p>
+                    @if (item.ProjComplete == true)
+                    {
+                        <a href="@item.GitSrc" target="_blank">
+                            <img src="~/images/GitHub-Mark-32px.png" alt="GitHub icon" />
+                        </a>
+                    }
+                    </div> <!-- end left column -->
+
+                    <!-- start right column. displays screenshot of project -->
+                    <div class="col-md-8 col-sm-8">
+                        
+                        
+                    </div> <!-- end right column -->
+                </div><!-- end of row-->
+            </div> <!-- end of slide -->
+        
+    </div> <!-- end of slider -->
+</section> <!-- end of projects section -->
+
+<section id="contact">
+    <div class="spacer"></div>
+    <div class="panel panel-info">
+        <div class="panel-heading">Contact</div>
+        <div class="panel-body">
+            <div class="spacer"></div>
+            <p>jaclyn.noga@gmail.com</p>
+            <br />
+            <a href="https://github.com/JaclynNoga" target="_blank">
+                <img src="~/images/GitHub-Mark-120px-plus.png" alt="Big GitHub Icon" />
+            </a>&nbsp;
+            <a href="https://www.linkedin.com/in/jaclynnoga" target="_blank">
+                <img src="~/images/linkedin.png" alt="Big Linked In Icon"/>
+            </a>
+        </div> <!-- end of panel body -->
+    </div><!-- end of contact panel -->
+</section> <!-- end of contact section-->
