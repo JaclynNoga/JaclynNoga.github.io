@@ -1,8 +1,38 @@
-@model IEnumerable<Jaclyn_Noga_Portfolio.Models.Projects>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaclyn Noga</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/Slider.css" rel="stylesheet" type="text/css" /> <!-- style sheet just for projects slider -->
+</head>
 
-@{
-    ViewBag.Title = "Index";
-}
+<body>
+    <div class="navbar navbar-default navbar-fixed-top"> <!-- begin navbar-->
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </div> <!-- end of nav bar-->
+
+    <div class="container body-content">
 
 <div class="jumbotron">
     <div class="row">
@@ -124,3 +154,25 @@
         </div> <!-- end of panel body -->
     </div><!-- end of contact panel -->
 </section> <!-- end of contact section-->
+
+<hr />
+    </div>
+
+        <div id="footer"> <!-- begin footer-->
+            <div class="container-fluid row">
+                <h5>Jaclyn Noga &copy; @DateTime.Now.Year</h5>
+            </div>
+        </div> <!-- end of footer -->
+
+
+    <!-- Return to Top -->
+    <a href="javascript:" id="return-to-top"><span class="glyphicon glyphicon-circle-arrow-up" style="font-size:45px"></span></a>
+
+    <script src="~/Scripts/jquery-2.2.4.min.js.js"></script>
+    <script src="~/Scripts/jquery.cycle2.min.js"></script>
+    <script src="~/Scripts/custom.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
