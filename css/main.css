@@ -1,0 +1,123 @@
+body {
+    padding-top: 50px;
+    font-family: 'Lora', Tahoma;
+    font-size: 18px;
+}
+
+.navbar, h1, h2, h3, h4, h5, .panel-heading, #skills, #footer {
+    font-family: "Muli", Helvetica, Arial, sans-serif;
+    letter-spacing: 2px;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input, select, textarea {
+    max-width: 280px;
+}
+
+.jumbotron {
+    margin-top: 30px;
+    background-color: #fcf8e3;
+    min-height: 500px;
+    padding: 50px;
+    border: 1px solid pink;
+}
+
+/* Used to add space between panels as well as fill in space within panel bodies*/
+.spacer {
+    min-height: 60px;
+}
+
+#skills {
+    font-size: smaller;
+    padding-left: 25px;
+}
+
+    #skills h4 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    #skills ul {
+        list-style-type: none;
+    }
+
+    /* makes bullet points in skills list plus signs */
+    #skills li:before {
+        content: "+";
+        margin-right: 15px;
+    }
+
+.panel-heading {
+    font-size: larger;
+    text-transform: uppercase;
+}
+
+.panel-body {
+    min-height: 385px;
+}
+
+#contact .panel-body {
+    text-align: center;
+}
+
+#footer {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    text-align: center;
+    vertical-align: central;
+    margin: 0;
+    position: static;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    min-height: 45px;
+}
+
+/* start return to top arrow*/
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+    #return-to-top i {
+        margin: 0;
+        position: relative;
+        left: 16px;
+        top: 13px;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    #return-to-top:hover {
+        color: rgba(0, 0, 0, 0.9);
+    }
+
+        #return-to-top:hover i {
+            color: #fff;
+            top: 5px;
+        }
+/* end return to top arrow */
